@@ -17,13 +17,16 @@ public class DataTabularFormStep {
 	public void user_enters_the_following_data(DataTable dataTable) {
 		
 		
-		List<List<String>> variable = dataTable.asLists(String.class);
+		List<List<String>> var = dataTable.asLists();
 		
-		for(List str:variable)
+		for(List<String> set:var)
 		{
-			System.out.println(str);
+			for(String value:set)
+			{
+				System.out.print(value+" ");
+			}
+			System.out.println();
 		}
-	  
 	}
 
 }
